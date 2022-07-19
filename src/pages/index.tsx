@@ -6,13 +6,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
-// import required modules Swiper
 import { Navigation, Pagination } from "swiper";
-
-
 import Router from 'next/router';
-
 
 
 const Home: NextPage = () => {
