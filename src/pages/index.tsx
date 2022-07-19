@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import * as React from 'react'
-import { Box, Center, ChakraProvider, Divider, HStack, Image, Stack, Text } from '@chakra-ui/react'
+import { Box, ChakraProvider, HStack, Image, Stack, Text } from '@chakra-ui/react'
 import { Header } from '../components/Header'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/css";
@@ -11,7 +11,19 @@ import "swiper/css/navigation";
 import { Navigation, Pagination } from "swiper";
 
 
+import Router from 'next/router';
+
+
+
 const Home: NextPage = () => {
+
+
+function europeRoute(){
+  Router.push({
+    pathname: '/europe'
+  })
+}
+
   return (
     <ChakraProvider>
       <Header />
@@ -120,7 +132,7 @@ const Home: NextPage = () => {
           >
 
             <SwiperSlide>
-              <Box backgroundImage='Europe.svg' w='100%' h='100%'>
+              <Box as='button' onClick={europeRoute} backgroundImage='Europe.svg' w='100%' h='100%'>
                 <Stack padding={180}>
                   <Text fontFamily='Poppins' fontWeight='medium' fontSize='4xl' color='white' >
                     Europa
